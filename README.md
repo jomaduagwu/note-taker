@@ -34,25 +34,21 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
   ## Installation
   Clone the respository from the repo in GitHub. Make sure you install Node.js and NPM on your computer. You will need to install the node package manager (NPM) using `npm init` and then the inquirer module using `npm i inquirer`. Install Express
+  `node server.js`
+  `npm install uuid`
 
 
   ## Usage
-  You can find the walkthrough video here - [README generator walkthrough video](https://drive.google.com/file/d/-------------/view?usp=sharing)
-
-  ![note taker video](./assets/-------------.gif)
-
-
-  Run ```node index.js``` in the command line and answer the questions about your project. After all the prompts are answered, 
-
-
+Link to the deployed HEROKU app - 
 
 
 ## Credits
 The starter code was cloned from - [The Coding Bootcamp](https://github.com/coding-boot-camp/miniature-eureka.git)
-  
+npm uuid - https://www.npmjs.com/package/uuid
 
 ## Features
-N/A
+Node.js
+Express.js
 
 
 ## Tests 
