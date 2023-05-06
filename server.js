@@ -36,3 +36,13 @@ app.use('/', htmlRoutes);
 // start tge server
 app.listen(PORT, () =>
 console.log(`Express server listening on port ${PORT}`));
+
+
+//display existing notes in the left, empty fields to enter new note in the right
+// app.get('/notes', (req, res) => {
+//     // TODO: Retrieve existing notes from a database or file
+//     const existingNotes = [];
+  
+//     // Render the notes page template with the existing notes
+//     res.render('notes', { notes: existingNotes });
+//   });
