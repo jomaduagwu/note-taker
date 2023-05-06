@@ -7,18 +7,31 @@ const fs = require('fs'); //needed?
 const apiRoutes = require('./routes/apiRoutes')
 const htmlRoutes = require('./routes/htmlRoutes')
 
+// initialize express
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// add middleware 
-app.use(express.json());
+
+
+const allNotes = require('./db/db.json');
+
+// add middleware, set-up parsing
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// link to assets
 app.use(express.static('public'));
 
-// route to route files
-app.use('/routes/api', apiRoutes);
-app.use('/routes/html', htmlRoutes);
+//need this?
+// app.get('api/notes', (req, res) => {
+//     res.json(allNotes.slice(1));
+// });
 
+// route to route files
+// app.use('/routes/api', apiRoutes);
+// app.use('/routes/html', htmlRoutes);
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 // start tge server
 app.listen(PORT, () =>
